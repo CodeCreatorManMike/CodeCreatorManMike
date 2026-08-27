@@ -43,8 +43,29 @@ export const SHOOTER = {
   statsHoldFrames: 20, // frames to hold on the stats card before looping
 };
 
-// Stats diagnostics panel (stats.svg)
+// Stats diagnostics panel (stats.svg) — kept for backward reference, unused by README now.
 export const STATS = {
   width: 900,
   height: 420,
+};
+
+// Identity + pinned-projects card (identity.svg)
+export const IDENTITY = {
+  width: 900,
+  height: 360,
+};
+
+// Skill progress bars (skills.svg) — fixed, hand-set values.
+// Order and values are the source of truth; NOT computed from repo language bytes.
+export const SKILLS = {
+  width: 900,
+  height: 300,
+  list: [
+    { name: "Python", pct: 40 },
+    { name: "C++", pct: 10 },
+    { name: "C#", pct: 10 },
+    { name: "HTML & CSS", pct: 75 },
+    { name: "PowerShell", pct: 100 },
+    { name: "Bash", pct: 100 },
+  ],
 };

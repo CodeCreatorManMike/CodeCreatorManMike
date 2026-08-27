@@ -4,50 +4,10 @@
 _Last synced: 2026-08-27T12:20:48.882Z • 570 contributions • 15 public repos_
 <!--UPDATED:END-->
 
-### contribution arcade
+<img src="assets/generated/identity.svg" width="100%" alt="whoami and pinned projects" />
 
 <img src="assets/generated/shooter.gif" width="100%" alt="contribution arcade shooter" />
 
-
-### `whoami`
-
-```
-BSc Artificial Intelligence — Oxford Brookes
-Python · PowerShell · Bash · C++ · HTML/CSS
-Focus: automation, ML systems, root-cause tooling, builder at heart
-
-LOCATION .......... UK
-STATUS ............ ONLINE
-```
-
-### `ps --projects`
-
-<!--PROJECTS:START-->
-| PID | PROJECT | TYPE | STATUS |
-|-----|---------|------|--------|
-| 1000 | [GRAVITY-OS](https://github.com/CodeCreatorManMike/GRAVITY-OS) | HTML | RUNNING |
-| 1001 | [PawPackPantry](https://github.com/CodeCreatorManMike/PawPackPantry) | TypeScript | RUNNING |
-| 1002 | [Kit-Bin](https://github.com/CodeCreatorManMike/Kit-Bin) | Astro | RUNNING |
-<!--PROJECTS:END-->
-
----
-
-### `stack --list` / system diagnostics
-
-<img src="assets/generated/stats.svg" width="100%" alt="system diagnostics and language stats" />
-
----
-
-### `help`
-
-```
-$ help
-  about       -> see 'whoami' above
-  projects    -> see 'ps --projects' above
-  stack       -> see 'stack --list' above
-  activity    -> see contribution arcade above
-  github      -> https://github.com/CodeCreatorManMike
-  contact     -> <!-- add LinkedIn/contact link here -->
-```
+<img src="assets/generated/skills.svg" width="100%" alt="skill progress bars" />
 
 `SESSION ACTIVE • CODECREATORMANMIKE`

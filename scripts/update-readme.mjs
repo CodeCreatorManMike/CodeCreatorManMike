@@ -1,6 +1,8 @@
-// Rewrites the marked <!--PROJECTS:START-->...<!--PROJECTS:END--> section (and
-// the last-updated stamp) in README.md in place, from data.json. Everything
-// else in README.md is left untouched.
+// Rewrites the last-updated stamp (<!--UPDATED:START-->...<!--UPDATED:END-->)
+// in README.md in place, from data.json. Pinned-project data is now rendered
+// directly into assets/generated/identity.svg by render-identity.mjs, so no
+// markdown table is generated here anymore. Everything else in README.md is
+// left untouched.
 import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -26,19 +28,6 @@ function replaceBetween(content, startMarker, endMarker, inner) {
     content.slice(end)
   );
 }
-
-// --- Projects table (ps --projects) ---
-const statusFor = (repo) => (repo.archived ? "ARCHIVED" : "RUNNING");
-
-let table = "| PID | PROJECT | TYPE | STATUS |\n";
-table += "|-----|---------|------|--------|\n";
-data.pinned.forEach((repo, i) => {
-  const pid = String(1000 + i);
-  const name = `[${repo.name}](${repo.url})`;
-  table += `| ${pid} | ${name} | ${repo.language} | ${statusFor(repo)} |\n`;
-});
-
-readme = replaceBetween(readme, "<!--PROJECTS:START-->", "<!--PROJECTS:END-->", table.trim());
 
 // --- Last updated stamp ---
 const stamp = `_Last synced: ${data.generatedAt} • ${data.totalContributions} contributions • ${data.publicRepos} public repos_`;
