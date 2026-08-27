@@ -36,8 +36,9 @@ export const BOOT = {
   width: 3600,
   height: 380,
   fps: 12,
-  totalFrames: 72, // ~6s @ 12fps
-  glitchFrame: 40,
+  // Single wordmark scene now (see render-boot.mjs): fade in, hold bright,
+  // flash/pulse, hold again, loop. 48 frames @ 12fps = ~4s per loop.
+  totalFrames: 48,
   readyText: "SYSTEM READY.",
   // figlet font used for the settled/glitch reveal of `text`. "Fraktur" is
   // the dense, 3D-block outline style (built from x/X/H/8-heavy strokes,
