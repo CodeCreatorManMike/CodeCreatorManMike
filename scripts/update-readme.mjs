@@ -1,9 +1,10 @@
-// Rewrites README.md to embed the three generated assets back-to-back with
-// no blank lines or plain-text lines between them: boot.gif, shooter.gif,
-// then panel.svg (which itself bakes in the timestamp, whoami, ps
-// --projects, skills bars, and the closing "SESSION ACTIVE" line as SVG
-// text). panel.svg is produced by render-page.mjs, which this script runs
-// first so the README always reflects the freshly generated asset.
+// Rewrites README.md to embed the single combined generated asset:
+// profile.gif — one continuous animated GIF containing the boot wordmark
+// scene, the contribution arcade shooter scene, and the static whoami / ps
+// --projects / skills --progress content, all on one canvas with a single
+// outer border (see scripts/render-combined.mjs). profile.gif is produced by
+// render-combined.mjs, which this script runs after so the README always
+// reflects the freshly generated asset.
 import { writeFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -11,11 +12,8 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const readmePath = path.join(__dirname, "..", "README.md");
 
-const README = [
-  '<img src="assets/generated/boot.gif" width="100%" alt="boot sequence" />',
-  '<img src="assets/generated/shooter.gif" width="100%" alt="contribution arcade shooter" />',
-  '<img src="assets/generated/panel.svg" width="100%" alt="whoami, pinned projects, and skill progress" />',
-].join("");
+const README =
+  '<img src="assets/generated/profile.gif" width="100%" alt="CodeCreatorManMike terminal profile: boot sequence, contribution arcade shooter, whoami, pinned projects, and skill progress" />';
 
 writeFileSync(readmePath, README + "\n");
-console.log("README.md updated (boot.gif + shooter.gif + panel.svg)");
+console.log("README.md updated (profile.gif)");

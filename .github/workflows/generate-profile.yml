@@ -38,14 +38,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: node scripts/github-data.mjs
 
-      - name: Render boot.gif
-        run: node scripts/render-boot.mjs
-
-      - name: Render shooter.gif
-        run: node scripts/render-shooter.mjs
-
-      - name: Render panel.svg
-        run: node scripts/render-page.mjs
+      - name: Render profile.gif
+        run: node scripts/render-combined.mjs
 
       - name: Update README.md
         run: node scripts/update-readme.mjs

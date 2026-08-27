@@ -6,12 +6,9 @@
   "type": "module",
   "scripts": {
     "data": "node scripts/github-data.mjs",
-    "boot": "node scripts/render-boot.mjs",
-    "shooter": "node scripts/render-shooter.mjs",
-    "identity": "node scripts/render-identity.mjs",
-    "skills": "node scripts/render-skills.mjs",
+    "combined": "node scripts/render-combined.mjs",
     "readme": "node scripts/update-readme.mjs",
-    "generate": "npm run data && npm run boot && npm run identity && npm run shooter && npm run skills && npm run readme"
+    "generate": "npm run data && npm run combined && npm run readme"
   },
   "dependencies": {
     "canvas": "^2.11.2",
