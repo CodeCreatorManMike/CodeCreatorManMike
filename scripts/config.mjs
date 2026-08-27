@@ -29,17 +29,20 @@ export const BOOT = {
   // unbroken line once settled (see render-boot.mjs — font size is fit
   // dynamically against this width via ctx.measureText, so widening this
   // is the lever to pull if the wordmark ever gets cut off/wrapped).
-  width: 1600,
-  height: 340,
+  // "Fraktur" is a much wider/taller 3D-block font than the previous
+  // "Doom" font (12 lines vs 6, ~375 chars wide vs ~126), so the canvas
+  // was widened/heightened accordingly to keep the wordmark legible
+  // instead of shrinking it down to an illegible font size.
+  width: 3600,
+  height: 380,
   fps: 12,
   totalFrames: 72, // ~6s @ 12fps
   glitchFrame: 40,
   readyText: "SYSTEM READY.",
-  // figlet font used for the settled/glitch reveal of `text`. "Doom" is a
-  // dense, blocky, all-caps-friendly font (built from _ / \ | < >) that
-  // renders "CODECREATORMANMIKE" as a single legible line without
-  // overlap, matching the chunky figlet-banner reference look.
-  figletFont: "Doom",
+  // figlet font used for the settled/glitch reveal of `text`. "Fraktur" is
+  // the dense, 3D-block outline style (built from x/X/H/8-heavy strokes,
+  // e.g. `x88f\``, `x~X88888Hx.`) matching the reference wordmark look.
+  figletFont: "Fraktur",
 };
 
 // Contribution arcade shooter (shooter.gif)
