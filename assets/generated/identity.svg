@@ -18,29 +18,29 @@
   <rect x="470" y="149" width="9" height="14" fill="#39FF88">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
   </rect>
-  
+
   <line x1="24" y1="190" x2="876" y2="190" stroke="#768390" stroke-width="1" opacity="0.25" />
   <text x="24" y="216" font-size="14" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">&gt; ps --projects</text>
-  
-  <text x="24" y="226" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">PID</text>
-  <text x="100" y="226" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">PROJECT</text>
-  <text x="430" y="226" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">TYPE</text>
-  <text x="560" y="226" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">STATUS</text>
-  <line x1="24" y1="218" x2="876" y2="218" stroke="#768390" stroke-width="1" opacity="0.3" />
-  
-  <text x="24" y="232" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1000</text>
-  <text x="100" y="232" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">GRAVITY-OS</text>
-  <text x="430" y="232" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">HTML</text>
-  <text x="560" y="232" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
 
-  <text x="24" y="262" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1001</text>
-  <text x="100" y="262" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">PawPackPantry</text>
-  <text x="430" y="262" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">TypeScript</text>
+  <text x="24" y="232" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">PID</text>
+  <text x="100" y="232" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">PROJECT</text>
+  <text x="430" y="232" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">TYPE</text>
+  <text x="560" y="232" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">STATUS</text>
+  <line x1="24" y1="218" x2="876" y2="218" stroke="#768390" stroke-width="1" opacity="0.3" />
+
+  <text x="24" y="262" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1000</text>
+  <text x="100" y="262" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">GRAVITY-OS</text>
+  <text x="430" y="262" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">HTML</text>
   <text x="560" y="262" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
 
-  <text x="24" y="292" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1002</text>
-  <text x="100" y="292" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Kit-Bin</text>
-  <text x="430" y="292" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">Astro</text>
+  <text x="24" y="292" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1001</text>
+  <text x="100" y="292" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">PawPackPantry</text>
+  <text x="430" y="292" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">TypeScript</text>
   <text x="560" y="292" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
-  <text x="24" y="346" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">generated 2026-08-27T12:28:07.742Z • source: github graphql api</text>
+
+  <text x="24" y="322" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1002</text>
+  <text x="100" y="322" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Kit-Bin</text>
+  <text x="430" y="322" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">Astro</text>
+  <text x="560" y="322" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
+<text x="24" y="346" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">generated 2026-08-27T12:28:07.742Z • source: github graphql api</text>
 </svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="802" viewBox="0 0 900 802">
+  <rect width="900" height="802" fill="#0D1117" />
+  <rect x="4" y="4" width="892" height="794" fill="none" stroke="#768390" stroke-width="1" />
+  <text x="24" y="26" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">Last synced: 2026-08-27T12:28:07.742Z • 570 contributions • 15 public repos</text>
+  
+  <text x="24" y="74" font-size="20" font-weight="bold" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">&gt; whoami</text>
+  <line x1="24" y1="86" x2="876" y2="86" stroke="#768390" stroke-width="1" opacity="0.4" />
+
+  <text x="24" y="118" font-size="17" font-weight="bold" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Python · PowerShell · Bash · C++ · HTML/CSS</text>
+  <text x="24" y="144" font-size="14" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">BSc Artificial Intelligence — Oxford Brookes</text>
+  <text x="24" y="168" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">Focus: automation, ML systems, root-cause tooling, builder at heart</text>
+
+  <text x="24" y="200" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">LOCATION</text>
+  <text x="150" y="200" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">UK</text>
+  <text x="300" y="200" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">STATUS</text>
+  <text x="410" y="200" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">ONLINE
+    <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite" />
+  </text>
+  <rect x="470" y="189" width="9" height="14" fill="#39FF88">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+  </rect>
+
+  <line x1="24" y1="230" x2="876" y2="230" stroke="#768390" stroke-width="1" opacity="0.25" />
+  <text x="24" y="256" font-size="14" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">&gt; ps --projects</text>
+
+  <text x="24" y="272" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">PID</text>
+  <text x="100" y="272" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">PROJECT</text>
+  <text x="430" y="272" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">TYPE</text>
+  <text x="560" y="272" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">STATUS</text>
+  <line x1="24" y1="258" x2="876" y2="258" stroke="#768390" stroke-width="1" opacity="0.3" />
+
+  <text x="24" y="302" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1000</text>
+  <text x="100" y="302" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">GRAVITY-OS</text>
+  <text x="430" y="302" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">HTML</text>
+  <text x="560" y="302" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
+
+  <text x="24" y="332" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1001</text>
+  <text x="100" y="332" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">PawPackPantry</text>
+  <text x="430" y="332" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">TypeScript</text>
+  <text x="560" y="332" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
+
+  <text x="24" y="362" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">1002</text>
+  <text x="100" y="362" font-size="13" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Kit-Bin</text>
+  <text x="430" y="362" font-size="13" fill="#58A6FF" font-family="'Consolas', 'Courier New', monospace">Astro</text>
+  <text x="560" y="362" font-size="13" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">RUNNING</text>
+<text x="24" y="386" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">generated 2026-08-27T12:28:07.742Z • source: github graphql api</text>
+  
+  <text x="24" y="436" font-size="20" font-weight="bold" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">&gt; skills --progress</text>
+  <line x1="24" y1="448" x2="876" y2="448" stroke="#768390" stroke-width="1" opacity="0.4" />
+
+  <text x="24" y="497" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Python</text>
+  <rect x="190" y="482" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
+  <rect x="190" y="482" width="0" height="20" rx="2" fill="#D6E0E7">
+    <animate attributeName="width" from="0" to="246.4" dur="1.00s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
+  </rect>
+  <text x="818" y="497" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">40%</text>
+
+  <text x="24" y="537" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">C++</text>
+  <rect x="190" y="522" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
+  <rect x="190" y="522" width="0" height="20" rx="2" fill="#D6E0E7">
+    <animate attributeName="width" from="0" to="61.6" dur="1.15s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
+  </rect>
+  <text x="818" y="537" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">10%</text>
+
+  <text x="24" y="577" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">C#</text>
+  <rect x="190" y="562" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
+  <rect x="190" y="562" width="0" height="20" rx="2" fill="#D6E0E7">
+    <animate attributeName="width" from="0" to="61.6" dur="1.30s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
+  </rect>
+  <text x="818" y="577" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">10%</text>
+
+  <text x="24" y="617" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">HTML &amp; CSS</text>
+  <rect x="190" y="602" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
+  <rect x="190" y="602" width="0" height="20" rx="2" fill="#58A6FF">
+    <animate attributeName="width" from="0" to="462.0" dur="1.45s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
+  </rect>
+  <text x="818" y="617" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">75%</text>
+
+  <text x="24" y="657" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">PowerShell</text>
+  <rect x="190" y="642" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
+  <rect x="190" y="642" width="0" height="20" rx="2" fill="#39FF88">
+    <animate attributeName="width" from="0" to="616.0" dur="1.60s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
+  </rect>
+  <text x="818" y="657" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">100%</text>
+
+  <text x="24" y="697" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Bash</text>
+  <rect x="190" y="682" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
+  <rect x="190" y="682" width="0" height="20" rx="2" fill="#39FF88">
+    <animate attributeName="width" from="0" to="616.0" dur="1.75s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
+  </rect>
+  <text x="818" y="697" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">100%</text>
+<text x="24" y="746" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">learning progress • hand-tracked, updated manually in scripts/config.mjs</text>
+  <text x="24" y="788" font-size="14" font-weight="bold" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">SESSION ACTIVE • CODECREATORMANMIKE</text>
+</svg>

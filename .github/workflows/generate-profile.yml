@@ -41,14 +41,11 @@ jobs:
       - name: Render boot.gif
         run: node scripts/render-boot.mjs
 
-      - name: Render identity.svg
-        run: node scripts/render-identity.mjs
-
       - name: Render shooter.gif
         run: node scripts/render-shooter.mjs
 
-      - name: Render skills.svg
-        run: node scripts/render-skills.mjs
+      - name: Render panel.svg
+        run: node scripts/render-page.mjs
 
       - name: Update README.md
         run: node scripts/update-readme.mjs

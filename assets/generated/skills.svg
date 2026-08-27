@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="360" viewBox="0 0 900 360">
   <rect width="900" height="360" fill="#0D1117" />
   <rect x="4" y="4" width="892" height="352" fill="none" stroke="#768390" stroke-width="1" />
-
+  
   <text x="24" y="34" font-size="20" font-weight="bold" fill="#39FF88" font-family="'Consolas', 'Courier New', monospace">&gt; skills --progress</text>
   <line x1="24" y1="46" x2="876" y2="46" stroke="#768390" stroke-width="1" opacity="0.4" />
 
-  
   <text x="24" y="95" font-size="14" fill="#D6E0E7" font-family="'Consolas', 'Courier New', monospace">Python</text>
   <rect x="190" y="80" width="616" height="20" rx="2" fill="#111820" stroke="#768390" stroke-width="1" />
   <rect x="190" y="80" width="0" height="20" rx="2" fill="#D6E0E7">
@@ -47,6 +46,5 @@
     <animate attributeName="width" from="0" to="616.0" dur="1.75s" begin="0s" fill="freeze" calcMode="spline" keySplines="0.2 0 0.2 1" />
   </rect>
   <text x="818" y="295" font-size="13" fill="#768390" font-family="'Consolas', 'Courier New', monospace">100%</text>
-
-  <text x="24" y="344" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">learning progress • hand-tracked, updated manually in scripts/config.mjs</text>
+<text x="24" y="344" font-size="11" fill="#768390" font-family="'Consolas', 'Courier New', monospace">learning progress • hand-tracked, updated manually in scripts/config.mjs</text>
 </svg>
