@@ -1,13 +1,3 @@
-<table>
-<tr><td>
-
-```
-●  ●  ●    michael@github:~    ONLINE ●
-```
-
-</td></tr>
-</table>
-
 <img src="assets/generated/boot.gif" width="100%" alt="boot sequence" />
 
 <!--UPDATED:START-->
