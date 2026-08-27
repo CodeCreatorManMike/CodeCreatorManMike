@@ -4,7 +4,10 @@
 _Last synced: 2026-08-27T12:16:40.921Z • 570 contributions • 15 public repos_
 <!--UPDATED:END-->
 
----
+### contribution arcade
+
+<img src="assets/generated/shooter.gif" width="100%" alt="contribution arcade shooter" />
+
 
 ### `whoami`
 
@@ -16,14 +19,6 @@ Focus: automation, ML systems, root-cause tooling, builder at heart
 LOCATION .......... UK
 STATUS ............ ONLINE
 ```
-
----
-
-### contribution arcade
-
-<img src="assets/generated/shooter.gif" width="100%" alt="contribution arcade shooter" />
-
----
 
 ### `ps --projects`
 
