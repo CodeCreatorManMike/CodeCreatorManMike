@@ -1,1 +1,1 @@
-<img src="assets/generated/panel.svg" width="100%" alt="whoami, pinned projects, and skill progress" /><img src="assets/generated/boot.gif" width="100%" alt="boot sequence" /><img src="assets/generated/shooter.gif" width="100%" alt="contribution arcade shooter" />
+<img src="assets/generated/boot.gif" width="100%" alt="boot sequence" /><img src="assets/generated/shooter.gif" width="100%" alt="contribution arcade shooter" /><img src="assets/generated/panel.svg" width="100%" alt="whoami, pinned projects, and skill progress" />
