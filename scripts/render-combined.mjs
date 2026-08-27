@@ -17,7 +17,7 @@
 import { createCanvas } from "canvas";
 import GIFEncoder from "gif-encoder-2";
 import figlet from "figlet";
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { PALETTE, FONT_FAMILY, BOOT, SHOOTER, BIO, GITHUB_LOGIN, SKILLS } from "./config.mjs";
@@ -658,7 +658,9 @@ for (let f = 0; f < TOTAL_FRAMES; f++) {
 
 encoder.finish();
 const buf = encoder.out.getData();
-const outPath = path.join(__dirname, "..", "assets", "generated", "profile.gif");
+const outDir = path.join(__dirname, "..", "assets", "generated");
+mkdirSync(outDir, { recursive: true });
+const outPath = path.join(outDir, "profile.gif");
 writeFileSync(outPath, buf);
 console.log(
   `Wrote ${outPath} (${buf.length} bytes, ${WIDTH}x${TOTAL_HEIGHT}, ${TOTAL_FRAMES} frames @ ${FPS}fps)`
