@@ -25,12 +25,21 @@ export const BIO = {
 // Boot animation (boot.gif)
 export const BOOT = {
   text: "CODECREATORMANMIKE",
-  width: 900,
-  height: 160,
+  // Wide enough to fit the figlet block-letter wordmark for `text` on one
+  // unbroken line once settled (see render-boot.mjs — font size is fit
+  // dynamically against this width via ctx.measureText, so widening this
+  // is the lever to pull if the wordmark ever gets cut off/wrapped).
+  width: 1600,
+  height: 340,
   fps: 12,
   totalFrames: 72, // ~6s @ 12fps
   glitchFrame: 40,
   readyText: "SYSTEM READY.",
+  // figlet font used for the settled/glitch reveal of `text`. "Doom" is a
+  // dense, blocky, all-caps-friendly font (built from _ / \ | < >) that
+  // renders "CODECREATORMANMIKE" as a single legible line without
+  // overlap, matching the chunky figlet-banner reference look.
+  figletFont: "Doom",
 };
 
 // Contribution arcade shooter (shooter.gif)
