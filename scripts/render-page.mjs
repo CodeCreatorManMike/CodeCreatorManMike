@@ -24,9 +24,9 @@ function main() {
   const width = IDENTITY.width;
 
   // --- Section 1: timestamp line ---
-  const stampLineH = 40;
+  const stampLineH = 44;
   const stampText = `Last synced: ${data.generatedAt} • ${data.totalContributions} contributions • ${data.publicRepos} public repos`;
-  const stampMarkup = `<text x="24" y="26" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">${esc(
+  const stampMarkup = `<text x="28" y="28" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">${esc(
     stampText
   )}</text>`;
 
@@ -40,10 +40,10 @@ function main() {
 
   // --- Section 4: closing line ---
   const closingOffset = skillsOffset + skills.height;
-  const closingLineH = 40;
+  const closingLineH = 44;
   const closingText = `SESSION ACTIVE • ${GITHUB_LOGIN.toUpperCase()}`;
-  const closingMarkup = `<text x="24" y="${
-    closingOffset + 26
+  const closingMarkup = `<text x="28" y="${
+    closingOffset + 28
   }" font-size="14" font-weight="bold" fill="${PALETTE.accent}" font-family="${FONT_FAMILY}">${esc(closingText)}</text>`;
 
   const height = closingOffset + closingLineH;

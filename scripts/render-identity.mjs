@@ -21,68 +21,99 @@ const statusFor = (repo) => (repo.archived ? "ARCHIVED" : "RUNNING");
 // render-page.mjs. `yOffset` shifts every coordinate down so the section can
 // be placed anywhere on a taller combined canvas. Returns { markup, height }
 // where height is the total vertical space this section occupies.
+// Shared left gutter used consistently across every sub-section (whoami,
+// ps --projects, skills, stamp/closing lines in render-page.mjs) so the
+// whole panel reads with one clean left edge.
+const MARGIN = 28;
+
+// Builds a "LABEL ........ VALUE" dot-leader run. The font is a fixed-width
+// monospace stack, so padding by character count lines columns up reliably
+// without measuring text.
+function dotLeader(label, fieldChars) {
+  const dots = Math.max(3, fieldChars - label.length - 1);
+  return `${label} ${".".repeat(dots)}`;
+}
+
 export function buildIdentityGroup(data, yOffset = 0) {
   const { width } = IDENTITY;
   const pinned = data.pinned || [];
-  const projectRowH = 30;
-  const projectsTop = 232;
-  const contentHeight = projectsTop + pinned.length * projectRowH + 40;
-  const height = Math.max(IDENTITY.height, contentHeight);
   const Y = (v) => v + yOffset;
 
-  // --- Zone 1: whoami (lead with who they are + key skills first) ---
-  const whoami = `
-  <text x="24" y="${Y(34)}" font-size="20" font-weight="bold" fill="${PALETTE.accent}" font-family="${FONT_FAMILY}">&gt; whoami</text>
-  <line x1="24" y1="${Y(46)}" x2="${width - 24}" y2="${Y(46)}" stroke="${PALETTE.muted}" stroke-width="1" opacity="0.4" />
+  // --- Vertical rhythm constants (shared shape across both zones below) ---
+  const headerY = 34; // section prompt baseline, e.g. "> whoami"
+  const underlineY = headerY + 12; // thin rule right under every header
+  const contentTopGap = 32; // gap from underline to first line of content
 
-  <text x="24" y="${Y(78)}" font-size="17" font-weight="bold" fill="${PALETTE.text}" font-family="${FONT_FAMILY}">${esc(
+  // --- Zone 1: whoami (lead with who they are + key skills first) ---
+  const skillsLineY = underlineY + contentTopGap; // 78
+  const headlineY = skillsLineY + 24; // 102
+  const focusLineY = headlineY + 22; // 124
+  const metaRowY = focusLineY + 34; // 158 — a touch more air before the meta row
+  const sectionDivY = metaRowY + 32; // 190 — separator before ps --projects
+
+  const whoami = `
+  <text x="${MARGIN}" y="${Y(headerY)}" font-size="16" font-weight="bold" fill="${PALETTE.accent}" font-family="${FONT_FAMILY}">&gt; whoami</text>
+  <line x1="${MARGIN}" y1="${Y(underlineY)}" x2="${width - MARGIN}" y2="${Y(underlineY)}" stroke="${PALETTE.muted}" stroke-width="1" opacity="0.4" />
+
+  <text x="${MARGIN}" y="${Y(skillsLineY)}" font-size="17" font-weight="bold" fill="${PALETTE.text}" font-family="${FONT_FAMILY}">${esc(
     BIO.skillsLine
   )}</text>
-  <text x="24" y="${Y(104)}" font-size="14" fill="${PALETTE.highlight}" font-family="${FONT_FAMILY}">${esc(
+  <text x="${MARGIN}" y="${Y(headlineY)}" font-size="14" fill="${PALETTE.highlight}" font-family="${FONT_FAMILY}">${esc(
     BIO.headline
   )}</text>
-  <text x="24" y="${Y(128)}" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">${esc(
+  <text x="${MARGIN}" y="${Y(focusLineY)}" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">${esc(
     BIO.focusLine
   )}</text>
 
-  <text x="24" y="${Y(160)}" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">LOCATION</text>
-  <text x="150" y="${Y(160)}" font-size="13" fill="${PALETTE.text}" font-family="${FONT_FAMILY}">${esc(BIO.location)}</text>
-  <text x="300" y="${Y(160)}" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">STATUS</text>
-  <text x="410" y="${Y(160)}" font-size="13" fill="${PALETTE.accent}" font-family="${FONT_FAMILY}">${esc(BIO.status)}
+  <text x="${MARGIN}" y="${Y(metaRowY)}" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">${esc(
+    dotLeader("LOCATION", 16)
+  )}</text>
+  <text x="${MARGIN + 158}" y="${Y(metaRowY)}" font-size="13" fill="${PALETTE.text}" font-family="${FONT_FAMILY}">${esc(BIO.location)}</text>
+  <text x="${MARGIN + 300}" y="${Y(metaRowY)}" font-size="13" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">${esc(
+    dotLeader("STATUS", 14)
+  )}</text>
+  <text x="${MARGIN + 420}" y="${Y(metaRowY)}" font-size="13" fill="${PALETTE.accent}" font-family="${FONT_FAMILY}">${esc(BIO.status)}
     <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite" />
   </text>
-  <rect x="470" y="${Y(149)}" width="9" height="14" fill="${PALETTE.accent}">
+  <rect x="${MARGIN + 480}" y="${Y(metaRowY - 11)}" width="9" height="14" fill="${PALETTE.accent}">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
-  </rect>`;
+  </rect>
+
+  <line x1="${MARGIN}" y1="${Y(sectionDivY)}" x2="${width - MARGIN}" y2="${Y(sectionDivY)}" stroke="${
+    PALETTE.muted
+  }" stroke-width="1" opacity="0.3" />`;
 
   // --- Zone 2: ps --projects (same panel, clearly separated section) ---
-  const sectionDivY = 190;
+  const header2Y = sectionDivY + 32; // 222
+  const underline2Y = header2Y + 12; // 234
+  const tableHeaderY = underline2Y + 28; // 262
+  const tableRuleY = tableHeaderY + 12; // 274
+  const rowStart = tableRuleY + 28; // 302
+  const projectRowH = 32;
+
   const projectsHeader = `
-  <line x1="24" y1="${Y(sectionDivY)}" x2="${width - 24}" y2="${Y(sectionDivY)}" stroke="${
+  <text x="${MARGIN}" y="${Y(header2Y)}" font-size="16" font-weight="bold" fill="${PALETTE.accent}" font-family="${FONT_FAMILY}">&gt; ps --projects</text>
+  <line x1="${MARGIN}" y1="${Y(underline2Y)}" x2="${width - MARGIN}" y2="${Y(underline2Y)}" stroke="${
     PALETTE.muted
-  }" stroke-width="1" opacity="0.25" />
-  <text x="24" y="${Y(216)}" font-size="14" fill="${PALETTE.highlight}" font-family="${FONT_FAMILY}">&gt; ps --projects</text>`;
+  }" stroke-width="1" opacity="0.4" />`;
 
-  const colPid = 24;
-  const colName = 100;
-  const colType = 430;
-  const colStatus = 560;
+  const colPid = MARGIN;
+  const colName = MARGIN + 76;
+  const colType = MARGIN + 402;
+  const colStatus = MARGIN + 532;
 
-  // Header row baseline sits at projectsTop; data rows start a full
-  // projectRowH below it, giving header and rows the same uniform spacing
-  // rhythm as the whoami section above (fixes header/first-row overlap).
   const headerRow = `
-  <text x="${colPid}" y="${Y(projectsTop)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">PID</text>
-  <text x="${colName}" y="${Y(projectsTop)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">PROJECT</text>
-  <text x="${colType}" y="${Y(projectsTop)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">TYPE</text>
-  <text x="${colStatus}" y="${Y(projectsTop)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">STATUS</text>
-  <line x1="24" y1="${Y(projectsTop - 14)}" x2="${width - 24}" y2="${Y(projectsTop - 14)}" stroke="${
+  <text x="${colPid}" y="${Y(tableHeaderY)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">PID</text>
+  <text x="${colName}" y="${Y(tableHeaderY)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">PROJECT</text>
+  <text x="${colType}" y="${Y(tableHeaderY)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">TYPE</text>
+  <text x="${colStatus}" y="${Y(tableHeaderY)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">STATUS</text>
+  <line x1="${MARGIN}" y1="${Y(tableRuleY)}" x2="${width - MARGIN}" y2="${Y(tableRuleY)}" stroke="${
     PALETTE.muted
   }" stroke-width="1" opacity="0.3" />`;
 
   const rows = pinned
     .map((repo, i) => {
-      const y = Y(projectsTop + (i + 1) * projectRowH);
+      const y = Y(rowStart + i * projectRowH);
       const pid = String(1000 + i);
       const status = statusFor(repo);
       const statusColor = status === "RUNNING" ? PALETTE.accent : PALETTE.muted;
@@ -98,7 +129,11 @@ export function buildIdentityGroup(data, yOffset = 0) {
     })
     .join("\n");
 
-  const footer = `<text x="24" y="${Y(height - 16)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">generated ${esc(
+  const lastRowY = rowStart + Math.max(0, pinned.length - 1) * projectRowH;
+  const contentHeight = lastRowY + 56;
+  const height = Math.max(IDENTITY.height, contentHeight);
+
+  const footer = `<text x="${MARGIN}" y="${Y(height - 16)}" font-size="11" fill="${PALETTE.muted}" font-family="${FONT_FAMILY}">generated ${esc(
     data.generatedAt
   )} • source: github graphql api</text>`;
 
