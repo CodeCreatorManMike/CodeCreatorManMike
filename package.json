@@ -1,0 +1,19 @@
+{
+  "name": "codecreatormanmike-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generates the terminal/arcade-styled GitHub profile README for CodeCreatorManMike",
+  "type": "module",
+  "scripts": {
+    "data": "node scripts/github-data.mjs",
+    "boot": "node scripts/render-boot.mjs",
+    "shooter": "node scripts/render-shooter.mjs",
+    "stats": "node scripts/render-stats.mjs",
+    "readme": "node scripts/update-readme.mjs",
+    "generate": "npm run data && npm run boot && npm run shooter && npm run stats && npm run readme"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "gif-encoder-2": "^1.0.5"
+  }
+}
