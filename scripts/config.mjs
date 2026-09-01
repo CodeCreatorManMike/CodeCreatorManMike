@@ -16,7 +16,7 @@ export const FONT_FAMILY = "'Consolas', 'Courier New', monospace";
 
 export const BIO = {
   headline: "BSc Artificial Intelligence — Oxford Brookes",
-  skillsLine: "Python · PowerShell · Bash · C++ · C# · HTML/CSS",
+  skillsLine: "Python · C++ · C# · SQL · PowerShell · Bash · HTML/CSS",
   focusLine: "Focus: automation, ML systems, root-cause tooling, builder at heart",
   location: "UK",
   status: "ONLINE",
@@ -74,10 +74,10 @@ export const SKILLS = {
   width: 900,
   height: 300,
   list: [
-    { name: "Python", pct: 40 },
-    { name: "SQL", pct: 40 },
+    { name: "Python", pct: 60 },
+    { name: "SQL", pct: 35 },
     { name: "C++", pct: 10 },
-    { name: "C#", pct: 10 },
+    { name: "C#", pct: 5 },
     { name: "HTML & CSS", pct: 75 },
     { name: "PowerShell", pct: 100 },
     { name: "Bash", pct: 100 },
