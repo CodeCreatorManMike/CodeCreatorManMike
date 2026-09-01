@@ -1,1 +1,1 @@
-<img src="assets/generated/profile.gif" width="100%" alt="CodeCreatorManMike terminal profile: boot sequence, contribution arcade shooter, whoami, pinned projects, and skill progress" />
+<img src="assets/generated/profile.gif" width="100%" alt="Animated terminal-style GitHub profile for CodeCreatorManMike, cycling through a boot sequence, a contribution-graph arcade shooter, a whoami identity card, pinned projects, and skill progress bars." />
