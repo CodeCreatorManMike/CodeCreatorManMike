@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: generate-profile
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -51,7 +55,16 @@ jobs:
           git add README.md assets/generated data.json
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "chore: regenerate profile [skip ci]"
-            git push
+            for i in 1 2 3 4 5; do
+              if git push; then
+                exit 0
+              fi
+              echo "Push rejected (attempt $i), rebasing onto latest main and retrying..."
+              git fetch origin main
+              git rebase origin/main
+            done
+            echo "Push failed after retries."
+            exit 1
           else
             echo "No changes to commit."
           fi
