@@ -1,46 +1,40 @@
 {
-  "generatedAt": "2026-09-01T07:36:22.348Z",
+  "generatedAt": "2026-09-01T11:21:18.667Z",
   "login": "CodeCreatorManMike",
   "followers": 2,
-  "publicRepos": 15,
+  "publicRepos": 14,
   "totalContributions": 573,
   "currentStreak": 0,
   "languages": [
     {
       "name": "HTML",
       "color": "#e34c26",
-      "bytes": 6162487,
-      "pct": 57.9
+      "bytes": 6147529,
+      "pct": 58.1
     },
     {
       "name": "JavaScript",
       "color": "#f1e05a",
-      "bytes": 1611165,
-      "pct": 15.14
+      "bytes": 1579686,
+      "pct": 14.93
     },
     {
       "name": "Astro",
       "color": "#ff5a03",
       "bytes": 1073061,
-      "pct": 10.08
+      "pct": 10.14
     },
     {
       "name": "TypeScript",
       "color": "#3178c6",
       "bytes": 847988,
-      "pct": 7.97
+      "pct": 8.01
     },
     {
       "name": "Python",
       "color": "#3572A5",
       "bytes": 725176,
-      "pct": 6.81
-    },
-    {
-      "name": "CSS",
-      "color": "#663399",
-      "bytes": 84075,
-      "pct": 0.79
+      "pct": 6.85
     },
     {
       "name": "Shell",
@@ -52,7 +46,13 @@
       "name": "PowerShell",
       "color": "#012456",
       "bytes": 69499,
-      "pct": 0.65
+      "pct": 0.66
+    },
+    {
+      "name": "CSS",
+      "color": "#663399",
+      "bytes": 67207,
+      "pct": 0.64
     }
   ],
   "months": [
@@ -2185,7 +2185,7 @@
       "description": null,
       "language": "HTML",
       "archived": false,
-      "pushedAt": "2026-08-31T16:28:58Z"
+      "pushedAt": "2026-09-01T08:13:46Z"
     }
   ]
 }
