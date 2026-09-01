@@ -75,6 +75,7 @@ export const SKILLS = {
   height: 300,
   list: [
     { name: "Python", pct: 40 },
+    { name: "SQL", pct: 40 },
     { name: "C++", pct: 10 },
     { name: "C#", pct: 10 },
     { name: "HTML & CSS", pct: 75 },
