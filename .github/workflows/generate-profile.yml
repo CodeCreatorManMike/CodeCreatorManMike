@@ -39,7 +39,7 @@ jobs:
 
       - name: Fetch live GitHub data
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/github-data.mjs
 
       - name: Render profile.gif
